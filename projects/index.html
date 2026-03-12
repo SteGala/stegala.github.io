@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stefano Galantino | Projects</title>
+    <meta name="description" content="Research and Tech Projects by Stefano Galantino.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/components.js" defer></script>
+    <style>
+        .project-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        .project-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .project-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 0.5rem;
+            background: white;
+            padding: 0.5rem;
+            border: 1px solid var(--border-color);
+        }
+        .project-title h2 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        .project-role {
+            font-weight: 500;
+            color: var(--text-main);
+            margin-bottom: 0.25rem;
+        }
+        .project-meta {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .project-body p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .project-links {
+            margin-top: 1.5rem;
+        }
+        .project-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        @media (max-width: 768px) {
+            .project-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <site-header></site-header>
+    
+    <main class="container">
+        <h1>Projects</h1>
+        <p>An overview of the research and technology projects I have been actively involved in.</p>
+
+        <section style="margin-top: 3rem;">
+            <div class="project-card">
+                <div class="project-header">
+                    <!-- Replace with the actual logo when provided, using a placeholder for now to reserve the space -->
+                    <img src="../assets/images/fluidos_logo.png" alt="FLUIDOS Project Logo" class="project-logo" onerror="this.src='https://ui-avatars.com/api/?name=FLUIDOS&background=024959&color=fff&size=100'">
+                    <div class="project-title">
+                        <h2>FLUIDOS</h2>
+                        <div class="project-role">Work Package Leader (WP2: Reference Architecture)</div>
+                        <div class="project-meta">Horizon Europe Research and Innovation Programme</div>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <p>
+                        <strong>FLUIDOS (Flexible, scaLable, secUre, and decentralIseD Operating System)</strong> is an ambitious Horizon Europe project aimed at creating a unified, edge-to-cloud computing continuum. By leveraging decentralized architectures and advanced orchestration, FLUIDOS seeks to allow resources to be seamlessly shared, distributed, and processed close to where data is generated, optimizing performance and energy consumption.
+                    </p>
+                    <p>
+                        In this project, my primary involvement was leading <strong>Work Package 2 (WP2): Reference Architecture</strong>. In this role, I was responsible for designing and formalizing the core architectural blueprint that governs how different nodes in the computing continuum interact, ensuring scalability, security, and interoperability across diverse infrastructure providers.
+                    </p>
+                </div>
+                <div class="project-links">
+                    <a href="https://fluidos.eu/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 0.5rem 1rem;">
+                        <span>Visit FLUIDOS Website</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <site-footer></site-footer>
+</body>
+</html>
