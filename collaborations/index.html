@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stefano Galantino | Collaborations</title>
+    <meta name="description" content="Interactive map of Stefano Galantino's academic collaborations worldwide.">
+    
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    
+    <style>
+        #collaborations-map {
+            width: 100%;
+            height: 600px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-top: 2rem;
+            z-index: 1; /* ensure it doesn't overlap the header */
+        }
+        
+        .leaflet-popup-content-wrapper {
+            background: var(--bg-color) !important;
+            color: var(--text-main) !important;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+            border: 1px solid var(--border-color);
+        }
+        
+        .leaflet-popup-tip {
+            background: var(--bg-color) !important;
+        }
+
+        .popup-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            margin-top: 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .popup-location {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+        
+        .collaborator-list {
+            margin: 0;
+            padding-left: 1.25rem;
+            font-size: 0.95rem;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+        
+        .collaborator-list li {
+            margin-bottom: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <site-header></site-header>
+    
+    <main class="container">
+        <h1>Collaborations</h1>
+        <p>An interactive map visualizing the global network of researchers, academics, and industry professionals I've had the pleasure to collaborate with on various publications and projects.</p>
+        
+        <div id="collaborations-map" aria-label="Interactive map displaying academic collaborations"></div>
+    </main>
+
+    <site-footer></site-footer>
+
+    <!-- JS Dependencies -->
+    <script src="../js/components.js" defer></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="../js/collaborations.js" defer></script>
+</body>
+</html>
