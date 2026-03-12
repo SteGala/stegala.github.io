@@ -1,0 +1,149 @@
+[
+    {
+        "institution": "Politecnico di Torino",
+        "location": "Turin, Italy",
+        "coordinates": [
+            45.0621,
+            7.6622
+        ],
+        "collaborators": [
+            "Fulvio Risso",
+            "Jacopo Marino",
+            "Gabriele Castellano",
+            "Marco Iorio",
+            "Davide Miola",
+            "Riccardo Medina",
+            "Attilio Oliva",
+            "Francesco Cappa",
+            "Andrea Colli-Vignarelli"
+        ]
+    },
+    {
+        "institution": "FBK - Fondazione Bruno Kessler",
+        "location": "Trento, Italy",
+        "coordinates": [
+            46.0678,
+            11.1506
+        ],
+        "collaborators": [
+            "Domenico Siracusa"
+        ]
+    },
+    {
+        "institution": "IBM Research",
+        "location": "Dublin, Ireland",
+        "coordinates": [
+            53.4150,
+            -6.4484
+        ],
+        "collaborators": [
+            "Stefano Braghin",
+            "Liubov Nedoshivina"
+        ]
+    },
+    {
+        "institution": "Universidad de Murcia",
+        "location": "Murcia, Spain",
+        "coordinates": [
+            38.0238,
+            -1.1738
+        ],
+        "collaborators": [
+            "Antonio Fernando Skármeta Gómez"
+        ]
+    },
+    {
+        "institution": "TU Berlin",
+        "location": "Berlin, Germany",
+        "coordinates": [
+            52.5126,
+            13.3268
+        ],
+        "collaborators": [
+            "Nasir Asadov",
+            "Matthias Finkbeiner"
+        ]
+    },
+    {
+        "institution": "ETH Zurich",
+        "location": "Zurich, Switzerland",
+        "coordinates": [
+            47.3763,
+            8.5478
+        ],
+        "collaborators": [
+            "Vlad C Coroamă"
+        ]
+    },
+    {
+        "institution": "University of Ferrara / Bologna",
+        "location": "Ferrara, Italy",
+        "coordinates": [
+            44.8381,
+            11.6198
+        ],
+        "collaborators": [
+            "Elisa Drudi",
+            "Giuseppe Di Modica",
+            "Luca Foschini",
+            "Umberto Ardinghi",
+            "Filippo Poltronieri",
+            "Mauro Tortonesi"
+        ]
+    },
+    {
+        "institution": "Politecnico di Milano",
+        "location": "Milan, Italy",
+        "coordinates": [
+            45.4786,
+            9.2274
+        ],
+        "collaborators": [
+            "Giacomo Verticale"
+        ]
+    },
+    {
+        "institution": "Telecom Italia (TIM)",
+        "location": "Turin, Italy",
+        "coordinates": [
+            45.0703,
+            7.6869
+        ],
+        "collaborators": [
+            "Antonio Manzalini"
+        ]
+    },
+    {
+        "institution": "RSE (Smart Grids)",
+        "location": "Italy",
+        "coordinates": [
+            44.4056,
+            8.9463
+        ],
+        "collaborators": [
+            "Andrea Cazzaniga",
+            "Fabrizio Garrone",
+            "Roberta Terruggia",
+            "Riccardo Lazzari",
+            "Luca Zuanazzi",
+            "Elisa Albanese"
+        ]
+    },
+    {
+        "institution": "Saint Louis University (SLU)",
+        "location": "St. Louis, MO, USA",
+        "coordinates": [38.6366, -90.2348],
+        "collaborators": [
+            "Andrea Pinto",
+            "Flavio Esposito"
+        ]
+    },
+    {
+        "institution": "Telefonica",
+        "location": "Barcelona, Spain",
+        "coordinates": [41.3851, 2.1734],
+        "collaborators": [
+            "Eduard Marin"
+        ]
+    }
+]
