@@ -42,12 +42,29 @@
     <main class="container">
         <h1>Publications</h1>
         <p>A complete list of my peer-reviewed journal articles, conference papers, and academic texts extracted from Google Scholar.</p>
+        
+        <div style="margin-top: 1.5rem; margin-bottom: 1rem;">
+            <a href="https://scholar.google.com/citations?user=E2J5xZcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Full Profile on Google Scholar</a>
+        </div>
 
-        <section style="margin-top: 3rem;">
+        <!-- Filter Controls -->
+        <div class="filter-controls" style="margin-top: 2rem;">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="cloud-continuum">Cloud Continuum</button>
+            <button class="filter-btn" data-filter="edge-computing">Edge Computing</button>
+            <button class="filter-btn" data-filter="orchestration">Orchestration & Autoscaling</button>
+            <button class="filter-btn" data-filter="sustainability">Sustainability & Energy</button>
+            <button class="filter-btn" data-filter="smart-grids">Smart Grids</button>
+        </div>
+
+        <section class="pub-section" style="margin-top: 3rem;">
             <h2>2026</h2>
             <div class="card-grid">
-                <div class="card" style="grid-column: 1 / -1;">
+                <div class="card pub-card" data-category="cloud-continuum" style="grid-column: 1 / -1;">
                     <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=E2J5xZcAAAAJ&citation_for_view=E2J5xZcAAAAJ:YOwf2qJgpHMC" target="_blank" rel="noopener noreferrer" class="publication-link">
+                        <div class="card-labels">
+                            <span class="label">Cloud Continuum</span>
+                        </div>
                         <h3>Edge-to-Cloud Continuum Made Real</h3>
                         <p style="margin-bottom: 0;"><strong>Stefano Galantino</strong>, Jacopo Marino, Fulvio Risso, Stefano Braghin, Liubov Nedoshivina, Antonio Fernando Skármeta Gómez, Domenico Siracusa</p>
                         <p style="margin-top: 0.25rem;"><em>Computer</em></p>
@@ -59,11 +76,15 @@
             </div>
         </section>
 
-        <section style="margin-top: 3rem;">
+        <section class="pub-section" style="margin-top: 3rem;">
             <h2>2025</h2>
             <div class="card-grid">
-                <div class="card" style="grid-column: 1 / -1;">
+                <div class="card pub-card" data-category="sustainability edge-computing" style="grid-column: 1 / -1;">
                     <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=E2J5xZcAAAAJ&citation_for_view=E2J5xZcAAAAJ:ULOm3_A8WrAC" target="_blank" rel="noopener noreferrer" class="publication-link">
+                        <div class="card-labels">
+                            <span class="label">Sustainability & Energy</span>
+                            <span class="label">Edge Computing</span>
+                        </div>
                         <h3>Carbon-aware spatio-temporal workload shifting in edge–cloud environments: A review and novel algorithm</h3>
                         <p style="margin-bottom: 0;">Nasir Asadov, Vlad C Coroamă, Matteo Franzil, <strong>Stefano Galantino</strong>, Matthias Finkbeiner</p>
                         <p style="margin-top: 0.25rem;"><em>Sustainability</em></p>
@@ -73,8 +94,12 @@
                     </a>
                 </div>
                 <!-- Adding other publications for 2025 similarly... -->
-                <div class="card" style="grid-column: 1 / -1;">
+                <div class="card pub-card" data-category="cloud-continuum orchestration" style="grid-column: 1 / -1;">
                     <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=E2J5xZcAAAAJ&citation_for_view=E2J5xZcAAAAJ:M3ejUd6NZC8C" target="_blank" rel="noopener noreferrer" class="publication-link">
+                        <div class="card-labels">
+                            <span class="label">Cloud Continuum</span>
+                            <span class="label">Orchestration & Autoscaling</span>
+                        </div>
                         <h3>Towards Cognitive Microservice Orchestration in the Multi-Cloud Continuum</h3>
                         <p style="margin-bottom: 0;">Elisa Drudi, Giuseppe Di Modica, Luca Foschini, <strong>Stefano Galantino</strong>, Fulvio Risso, Umberto Ardinghi, Filippo Poltronieri, Mauro Tortonesi</p>
                         <p style="margin-top: 0.25rem;"><em>Proceedings of the 26th International Middleware Conference</em></p>
@@ -83,8 +108,12 @@
                         </div>
                     </a>
                 </div>
-                <div class="card" style="grid-column: 1 / -1;">
+                <div class="card pub-card" data-category="orchestration cloud-continuum" style="grid-column: 1 / -1;">
                     <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=E2J5xZcAAAAJ&citation_for_view=E2J5xZcAAAAJ:4TOpqqG69KYC" target="_blank" rel="noopener noreferrer" class="publication-link">
+                        <div class="card-labels">
+                            <span class="label">Orchestration & Autoscaling</span>
+                            <span class="label">Cloud Continuum</span>
+                        </div>
                         <h3>Dynamic Multi-Provider Cluster Autoscaling For The Computing Continuum</h3>
                         <p style="margin-bottom: 0;"><strong>Stefano Galantino</strong>, Riccardo Medina, Attilio Oliva, Fulvio Risso, Giovanni Frattini</p>
                         <p style="margin-top: 0.25rem;"><em>Proceedings of the 26th International Middleware Conference</em></p>
@@ -93,8 +122,12 @@
                         </div>
                     </a>
                 </div>
-                <div class="card" style="grid-column: 1 / -1;">
+                <div class="card pub-card" data-category="cloud-continuum edge-computing" style="grid-column: 1 / -1;">
                     <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=E2J5xZcAAAAJ&citation_for_view=E2J5xZcAAAAJ:_kc_bZDykSQC" class="publication-link" style="cursor: default;">
+                        <div class="card-labels">
+                            <span class="label">Cloud Continuum</span>
+                            <span class="label">Edge Computing</span>
+                        </div>
                         <h3>Offloading Resources to the Cloud or to the Edge? A Liqo-Powered Testbed</h3>
                         <p style="margin-bottom: 0;">Davide Miola, <strong>Stefano Galantino</strong>, Ivano Cerrato, Francesco Lucrezia, Fulvio Risso, Giacomo Verticale</p>
                         <p style="margin-top: 0.25rem;"><em>2025 IEEE Conference on Standards for Communications and Networking (CSCN)</em></p>
@@ -103,8 +136,12 @@
                         </div>
                     </a>
                 </div>
-                <div class="card" style="grid-column: 1 / -1;">
+                <div class="card pub-card" data-category="cloud-continuum orchestration" style="grid-column: 1 / -1;">
                     <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=E2J5xZcAAAAJ&citation_for_view=E2J5xZcAAAAJ:Zph67rFs4hoC" class="publication-link" style="cursor: default;">
+                        <div class="card-labels">
+                            <span class="label">Cloud Continuum</span>
+                            <span class="label">Orchestration & Autoscaling</span>
+                        </div>
                         <h3>Distributed Orchestration in a Computing Continuum</h3>
                         <p style="margin-bottom: 0;"><strong>Stefano Galantino</strong></p>
                         <p style="margin-top: 0.25rem;"><em>Politecnico di Torino</em></p>
@@ -116,11 +153,15 @@
             </div>
         </section>
 
-        <section style="margin-top: 3rem;">
+        <section class="pub-section" style="margin-top: 3rem;">
             <h2>2024</h2>
             <div class="card-grid">
-                <div class="card" style="grid-column: 1 / -1;">
+                <div class="card pub-card" data-category="cloud-continuum edge-computing" style="grid-column: 1 / -1;">
                     <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=E2J5xZcAAAAJ&citation_for_view=E2J5xZcAAAAJ:KlAtU1dfN6UC" target="_blank" rel="noopener noreferrer" class="publication-link">
+                        <div class="card-labels">
+                            <span class="label">Cloud Continuum</span>
+                            <span class="label">Edge Computing</span>
+                        </div>
                         <h3>Building the cloud continuum with REAR</h3>
                         <p style="margin-bottom: 0;"><strong>Stefano Galantino</strong>, Elisa Albanese, Nasir Asadov, Stefano Braghin, Francesco Cappa, Andrea Colli-Vignarelli, Amjad Yousef Majid, Eduard Marin, Jacopo Marino, Lorenzo Moro, Liubov Nedoshivina, Fulvio Risso, Domenico Siracusa, Antonio Skarmeta, Luca Zuanazzi</p>
                         <p style="margin-top: 0.25rem;"><em>2024 IEEE 10th International Conference on Network Softwarization (NetSoft)</em></p>
@@ -129,8 +170,12 @@
                         </div>
                     </a>
                 </div>
-                <div class="card" style="grid-column: 1 / -1;">
+                <div class="card pub-card" data-category="edge-computing orchestration" style="grid-column: 1 / -1;">
                     <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=E2J5xZcAAAAJ&citation_for_view=E2J5xZcAAAAJ:3fE2CSJIrl8C" target="_blank" rel="noopener noreferrer" class="publication-link">
+                        <div class="card-labels">
+                            <span class="label">Edge Computing</span>
+                            <span class="label">Orchestration & Autoscaling</span>
+                        </div>
                         <h3>Scheduling multi-component applications across federated edge clusters with phare</h3>
                         <p style="margin-bottom: 0;">Gabriele Castellano, <strong>Stefano Galantino</strong>, Fulvio Risso, Antonio Manzalini</p>
                         <p style="margin-top: 0.25rem;"><em>IEEE Open Journal of the Communications Society</em></p>
@@ -139,8 +184,12 @@
                         </div>
                     </a>
                 </div>
-                <div class="card" style="grid-column: 1 / -1;">
+                <div class="card pub-card" data-category="sustainability edge-computing" style="grid-column: 1 / -1;">
                     <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=E2J5xZcAAAAJ&citation_for_view=E2J5xZcAAAAJ:kNdYIx-mwKoC" target="_blank" rel="noopener noreferrer" class="publication-link">
+                        <div class="card-labels">
+                            <span class="label">Sustainability & Energy</span>
+                            <span class="label">Edge Computing</span>
+                        </div>
                         <h3>Balancing Energy Efficiency and Infrastructure Knowledge in Cloud-to-Edge Task Distribution Systems</h3>
                         <p style="margin-bottom: 0;"><strong>Stefano Galantino</strong>, Andrea Pinto, Flavio Esposito, Antonio Manzalini, Fulvio Risso</p>
                         <p style="margin-top: 0.25rem;"><em>Proceedings of the 1st International Workshop on MetaOS for the Cloud-Edge-IoT Continuum</em></p>
@@ -152,11 +201,15 @@
             </div>
         </section>
 
-        <section style="margin-top: 3rem;">
+        <section class="pub-section" style="margin-top: 3rem;">
             <h2>2023</h2>
             <div class="card-grid">
-                <div class="card" style="grid-column: 1 / -1;">
+                <div class="card pub-card" data-category="sustainability cloud-continuum" style="grid-column: 1 / -1;">
                     <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=E2J5xZcAAAAJ&citation_for_view=E2J5xZcAAAAJ:8k81kl-MbHgC" target="_blank" rel="noopener noreferrer" class="publication-link">
+                        <div class="card-labels">
+                            <span class="label">Sustainability & Energy</span>
+                            <span class="label">Cloud Continuum</span>
+                        </div>
                         <h3>Assessing the potential energy savings of a fluidified infrastructure</h3>
                         <p style="margin-bottom: 0;"><strong>Stefano Galantino</strong>, Fulvio Risso, Vlad C Coroamă, Antonio Manzalini</p>
                         <p style="margin-top: 0.25rem;"><em>Computer</em></p>
@@ -168,11 +221,15 @@
             </div>
         </section>
 
-        <section style="margin-top: 3rem;">
+        <section class="pub-section" style="margin-top: 3rem;">
             <h2>2022</h2>
             <div class="card-grid">
-                <div class="card" style="grid-column: 1 / -1;">
+                <div class="card pub-card" data-category="smart-grids edge-computing" style="grid-column: 1 / -1;">
                     <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=E2J5xZcAAAAJ&citation_for_view=E2J5xZcAAAAJ:5nxA0vEk-isC" target="_blank" rel="noopener noreferrer" class="publication-link">
+                        <div class="card-labels">
+                            <span class="label">Smart Grids</span>
+                            <span class="label">Edge Computing</span>
+                        </div>
                         <h3>An edge-based architecture for phasor measurements in smart grids</h3>
                         <p style="margin-bottom: 0;"><strong>Stefano Galantino</strong>, Fulvio Risso, Andrea Cazzaniga, Fabrizio Garrone, Roberta Terruggia, Riccardo Lazzari</p>
                         <p style="margin-top: 0.25rem;"><em>2022 AEIT International Annual Conference (AEIT)</em></p>
@@ -184,11 +241,15 @@
             </div>
         </section>
 
-        <section style="margin-top: 3rem;">
+        <section class="pub-section" style="margin-top: 3rem;">
             <h2>2021</h2>
             <div class="card-grid">
-                <div class="card" style="grid-column: 1 / -1;">
+                <div class="card pub-card" data-category="orchestration cloud-continuum" style="grid-column: 1 / -1;">
                     <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=E2J5xZcAAAAJ&citation_for_view=E2J5xZcAAAAJ:qjMakFHDy7sC" target="_blank" rel="noopener noreferrer" class="publication-link">
+                        <div class="card-labels">
+                            <span class="label">Orchestration & Autoscaling</span>
+                            <span class="label">Cloud Continuum</span>
+                        </div>
                         <h3>RAYGO: Reserve as you go</h3>
                         <p style="margin-bottom: 0;"><strong>Stefano Galantino</strong>, Marco Iorio, Fulvio Risso, Antonio Manzalini</p>
                         <p style="margin-top: 0.25rem;"><em>2021 IEEE Intl Conf on DASC/PiCom/CBDCom/CyberSciTech</em></p>
@@ -200,11 +261,14 @@
             </div>
         </section>
 
-        <section style="margin-top: 3rem;">
+        <section class="pub-section" style="margin-top: 3rem;">
             <h2>2020</h2>
             <div class="card-grid">
-                <div class="card" style="grid-column: 1 / -1;">
+                <div class="card pub-card" data-category="orchestration" style="grid-column: 1 / -1;">
                     <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=E2J5xZcAAAAJ&citation_for_view=E2J5xZcAAAAJ:2osOgNQ5qMEC" target="_blank" rel="noopener noreferrer" class="publication-link">
+                        <div class="card-labels">
+                            <span class="label">Orchestration & Autoscaling</span>
+                        </div>
                         <h3>Enabling Job-aware scheduling on Kubernetes clusters</h3>
                         <p style="margin-bottom: 0;"><strong>Stefano Galantino</strong></p>
                         <p style="margin-top: 0.25rem;"><em>Politecnico di Torino</em></p>
@@ -216,11 +280,57 @@
             </div>
         </section>
         
-        <p style="margin-top: 3rem; text-align: center;">
-            <a href="https://scholar.google.com/citations?user=E2J5xZcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Full Profile on Google Scholar</a>
-        </p>
     </main>
 
-    <site-footer></site-footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const pubCards = document.querySelectorAll('.pub-card');
+            const sections = document.querySelectorAll('.pub-section');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active class on buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.dataset.filter;
+
+                    // Show/hide cards
+                    pubCards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const categories = card.dataset.category.split(' ');
+                            if (categories.includes(filter)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+
+                    // Hide completely empty year sections
+                    sections.forEach(sec => {
+                        const visibleCards = sec.querySelectorAll('.pub-card[style="display: block;"]');
+                        // if all cards are explicitly "all" or specific
+                        let hasVisible = false;
+                        
+                        // We iterate manually over all cards in this section, since relying blindly on inline style selector can be flawed 
+                        // if cards didn't have explicitly set 'display: block' yet
+                        sec.querySelectorAll('.pub-card').forEach(c => {
+                            if (c.style.display !== 'none') {
+                                hasVisible = true;
+                            }
+                        });
+
+                        sec.style.display = hasVisible ? 'block' : 'none';
+                    });
+                });
+            });
+        });
+    </script>
+
+    <site-footer></site-footer></site-footer>
 </body>
 </html>

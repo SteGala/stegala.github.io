@@ -263,6 +263,61 @@ a:hover {
   margin-bottom: 0;
 }
 
+/* Filtering & Labels */
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  background-color: var(--surface-color);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  background-color: var(--border-color);
+}
+
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.card-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.label {
+  background-color: #e0e7ff;
+  color: var(--primary-color);
+  border: 1px solid #c7d2fe;
+  padding: 0.25rem 0.6rem;
+  border-radius: 1rem;
+  font-size: 0.725rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+[data-theme='dark'] .label {
+    background-color: rgba(96, 165, 250, 0.15);
+    color: var(--primary-color);
+    border-color: rgba(96, 165, 250, 0.3);
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--border-color);
