@@ -34,6 +34,64 @@
         [data-theme="dark"] .uni-label {
             background: var(--surface-color);
         }
+        
+        /* Timeline / Grouping styles */
+        .course-timeline {
+            position: relative;
+            transition: padding 0.3s;
+        }
+        .course-timeline.grouped-mode {
+            padding-left: 3.5rem;
+        }
+        .course-timeline.grouped-mode::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            bottom: 24px;
+            left: 23px;
+            width: 2px;
+            background-color: var(--border-color);
+            z-index: 0;
+            transition: background-color 0.3s;
+        }
+        .uni-group {
+            margin-bottom: 0;
+        }
+        .course-timeline.grouped-mode .uni-group {
+            position: relative;
+            margin-bottom: 4rem;
+        }
+        .uni-group-marker {
+            display: none;
+        }
+        .course-timeline.grouped-mode .uni-group-marker {
+            display: flex;
+            position: absolute;
+            left: -3.5rem;
+            top: 0;
+            width: 48px;
+            height: 48px;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 6px;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            z-index: 2;
+            transition: background-color 0.3s;
+        }
+        .course-timeline.grouped-mode .uni-group-marker img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+        [data-theme='dark'] .course-timeline.grouped-mode .uni-group-marker {
+            background-color: #ffffff;
+            border-color: #ffffff;
+            box-shadow: none;
+        }
     </style>
 </head>
 <body>
@@ -44,114 +102,146 @@
         <p>I am a Contract Professor and Teaching Assistant (Collaboratore didattico) at the Department of Control and Computer Engineering (DAUIN), Politecnico di Torino.</p>
 
         <section style="margin-top: 3rem;">
-            <h2>Recent Courses (A.Y. 2025/2026)</h2>
-            <div class="card-grid">
-                <a href="https://www.polito.it/" class="card" style="text-decoration: none; color: inherit; display: block;">
-                    <span class="meta">M.Sc. Computer Engineering & Cybersecurity</span>
-                    <h3>Cloud Computing Technologies</h3>
-                    <div class="uni-label">
-                        <!-- Public reliable SVG logo for PoliTo -->
-                        <img src="../assets/images/polito.png" alt="Politecnico di Torino Logo" class="uni-logo">
-                        Politecnico di Torino
-                    </div>
-                </a>
-                
-                <a href="https://polito.uz/" class="card" style="text-decoration: none; color: inherit; display: block;">
-                    <span class="meta">B.Sc. ICT (Tashkent-Torino)</span>
-                    <h3>Operating Systems</h3>
-                    <div class="uni-label">
-                        <!-- TTPU Logo -->
-                        <img src="../assets/images/TTPU.png" alt="TTPU Logo" class="uni-logo" style="background: white; padding: 2px; border-radius: 2px;">
-                        Turin Polytechnic University in Tashkent
-                    </div>
-                </a>
-                
-                <a href="https://www.polito.it/" class="card" style="text-decoration: none; color: inherit; display: block;">
-                    <span class="meta">M.Sc. Engineering and Management & Others</span>
-                    <h3>Challenge@PoliTo by Firms - Hitachi Rail</h3>
-                    <div class="uni-label">
-                        <img src="../assets/images/polito.png" alt="Politecnico di Torino Logo" class="uni-logo">
-                        Politecnico di Torino
-                    </div>
-                </a>
-
-                <a href="https://www.uniupo.it/" class="card" style="text-decoration: none; color: inherit; display: block;">
-                    <span class="meta">B.Sc. Degree</span>
-                    <h3>Reti (Computer Networks)</h3>
-                    <div class="uni-label">
-                        <img src="../assets/images/uniupo.png" alt="UNIUPO Logo" class="uni-logo">
-                        Università del Piemonte Orientale
-                    </div>
-                </a>
+            <h2>Courses Taught</h2>
+            
+            <div class="filter-controls" id="course-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="polito">Politecnico di Torino</button>
+                <button class="filter-btn" data-filter="ttpu">TTPU</button>
+                <button class="filter-btn" data-filter="uniupo">UNIUPO</button>
+                <button class="filter-btn" data-filter="slu">Saint Louis University</button>
             </div>
-        </section>
 
-        <section style="margin-top: 3rem;">
-            <h2>Past Courses</h2>
-            <ul style="list-style: none; padding: 0;">
-                <li style="padding: 1rem 0; border-bottom: 1px solid var(--border-color);">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
-                        <div>
-                            <h3 style="margin-top: 0; margin-bottom: 0.25rem;">CSCI 1080 - Introduction to Computer Science: World Wide Web</h3>
-                            <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">(A.Y. 2024)</p>
-                        </div>
-                        <a href="https://www.slu.edu/" style="text-decoration: none; color: inherit;">
-                            <div class="uni-label" style="margin-top: 0;">
+            <div class="course-timeline grouped-mode" id="course-grid">
+                
+                <div class="uni-group" data-uni="polito">
+                    <div class="uni-group-marker">
+                        <img src="../assets/images/polito.png" alt="Politecnico di Torino">
+                    </div>
+                    <div class="card-grid">
+                        <a href="https://www.polito.it/" class="card course-card" data-uni="polito" style="text-decoration: none; color: inherit; display: block;">
+                            <div class="card-labels">
+                                <span class="label">A.Y. 2025/2026</span>
+                                <span class="label">A.Y. 2024/2025</span>
+                            </div>
+                            <span class="meta" style="margin-top: 0.5rem;">M.Sc. Computer Engineering & Cybersecurity</span>
+                            <h3>Cloud Computing Technologies</h3>
+                            <div class="uni-label">
+                                <img src="../assets/images/polito.png" alt="Politecnico di Torino Logo" class="uni-logo">
+                                Politecnico di Torino
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.polito.it/" class="card course-card" data-uni="polito" style="text-decoration: none; color: inherit; display: block;">
+                            <div class="card-labels">
+                                <span class="label">A.Y. 2025/2026</span>
+                            </div>
+                            <span class="meta" style="margin-top: 0.5rem;">M.Sc. Engineering and Management & Others</span>
+                            <h3>Challenge@PoliTo by Firms - Hitachi Rail</h3>
+                            <div class="uni-label">
+                                <img src="../assets/images/polito.png" alt="Politecnico di Torino Logo" class="uni-logo">
+                                Politecnico di Torino
+                            </div>
+                        </a>
+
+                        <a href="https://www.polito.it/" class="card course-card" data-uni="polito" style="text-decoration: none; color: inherit; display: block;">
+                            <div class="card-labels">
+                                <span class="label">A.Y. 2024/2025</span>
+                                <span class="label">A.Y. 2023/2024</span>
+                            </div>
+                            <span class="meta" style="margin-top: 0.5rem;">M.Sc. Computer Engineering</span>
+                            <h3>Enterprise Network Technologies</h3>
+                            <div class="uni-label">
+                                <img src="../assets/images/polito.png" alt="Politecnico di Torino Logo" class="uni-logo">
+                                Politecnico di Torino
+                            </div>
+                        </a>
+
+                        <a href="https://www.polito.it/" class="card course-card" data-uni="polito" style="text-decoration: none; color: inherit; display: block;">
+                            <div class="card-labels">
+                                <span class="label">A.Y. 2024/2025</span>
+                                <span class="label">A.Y. 2022/2023</span>
+                            </div>
+                            <span class="meta" style="margin-top: 0.5rem;">M.Sc. Data Science & Computer Engineering</span>
+                            <h3>Cloud Computing</h3>
+                            <div class="uni-label">
+                                <img src="../assets/images/polito.png" alt="Politecnico di Torino Logo" class="uni-logo">
+                                Politecnico di Torino
+                            </div>
+                        </a>
+
+                        <a href="https://www.polito.it/" class="card course-card" data-uni="polito" style="text-decoration: none; color: inherit; display: block;">
+                            <div class="card-labels">
+                                <span class="label">A.Y. 2024/2025</span>
+                            </div>
+                            <span class="meta" style="margin-top: 0.5rem;">Future Network Infrastructures</span>
+                            <h3>Project Work</h3>
+                            <div class="uni-label">
+                                <img src="../assets/images/polito.png" alt="Politecnico di Torino Logo" class="uni-logo">
+                                Politecnico di Torino
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="uni-group" data-uni="ttpu">
+                    <div class="uni-group-marker">
+                        <img src="../assets/images/TTPU.png" alt="TTPU">
+                    </div>
+                    <div class="card-grid">
+                        <a href="https://polito.uz/" class="card course-card" data-uni="ttpu" style="text-decoration: none; color: inherit; display: block;">
+                            <div class="card-labels">
+                                <span class="label">A.Y. 2025/2026</span>
+                            </div>
+                            <span class="meta" style="margin-top: 0.5rem;">B.Sc. ICT (Tashkent-Torino)</span>
+                            <h3>Operating Systems</h3>
+                            <div class="uni-label">
+                                <img src="../assets/images/TTPU.png" alt="TTPU Logo" class="uni-logo" style="background: white; padding: 2px; border-radius: 2px;">
+                                Turin Polytechnic University in Tashkent
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="uni-group" data-uni="uniupo">
+                    <div class="uni-group-marker">
+                        <img src="../assets/images/uniupo.png" alt="UNIUPO">
+                    </div>
+                    <div class="card-grid">
+                        <a href="https://www.uniupo.it/" class="card course-card" data-uni="uniupo" style="text-decoration: none; color: inherit; display: block;">
+                            <div class="card-labels">
+                                <span class="label">A.Y. 2025/2026</span>
+                            </div>
+                            <span class="meta" style="margin-top: 0.5rem;">B.Sc. Degree</span>
+                            <h3>Reti (Computer Networks)</h3>
+                            <div class="uni-label">
+                                <img src="../assets/images/uniupo.png" alt="UNIUPO Logo" class="uni-logo">
+                                Università del Piemonte Orientale
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="uni-group" data-uni="slu">
+                    <div class="uni-group-marker">
+                        <img src="../assets/images/slu.png" alt="Saint Louis University">
+                    </div>
+                    <div class="card-grid">
+                        <a href="https://www.slu.edu/" class="card course-card" data-uni="slu" style="text-decoration: none; color: inherit; display: block;">
+                            <div class="card-labels">
+                                <span class="label">A.Y. 2024</span>
+                            </div>
+                            <span class="meta" style="margin-top: 0.5rem;">Introduction to Computer Science</span>
+                            <h3>CSCI 1080 - World Wide Web</h3>
+                            <div class="uni-label">
                                 <img src="../assets/images/slu.png" alt="Saint Louis University Logo" class="uni-logo">
                                 Saint Louis University
                             </div>
                         </a>
                     </div>
-                </li>
-                <li style="padding: 1rem 0; border-bottom: 1px solid var(--border-color);">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
-                        <div>
-                            <h3 style="margin-top: 0; margin-bottom: 0.25rem;">Enterprise Network Technologies</h3>
-                            <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">M.Sc. Computer Engineering (A.Y. 2024/2025, A.Y. 2023/2024)</p>
-                        </div>
-                        <div class="uni-label" style="margin-top: 0;">
-                            <img src="../assets/images/polito.png" alt="Politecnico di Torino Logo" class="uni-logo">
-                            Politecnico di Torino
-                        </div>
-                    </div>
-                </li>
-                <li style="padding: 1rem 0; border-bottom: 1px solid var(--border-color);">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
-                        <div>
-                            <h3 style="margin-top: 0; margin-bottom: 0.25rem;">Cloud Computing Technologies</h3>
-                            <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">M.Sc. Computer Engineering (A.Y. 2024/2025)</p>
-                        </div>
-                        <div class="uni-label" style="margin-top: 0;">
-                            <img src="../assets/images/polito.png" alt="Politecnico di Torino Logo" class="uni-logo">
-                            Politecnico di Torino
-                        </div>
-                    </div>
-                </li>
-                <li style="padding: 1rem 0; border-bottom: 1px solid var(--border-color);">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
-                        <div>
-                            <h3 style="margin-top: 0; margin-bottom: 0.25rem;">Cloud Computing</h3>
-                            <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem; max-width: 600px;">Future Network Infrastructures / M.Sc. Data Science and Engineering / M.Sc. Computer Engineering (A.Y. 2024/2025, A.Y. 2022/2023)</p>
-                        </div>
-                        <div class="uni-label" style="margin-top: 0;">
-                            <img src="../assets/images/polito.png" alt="Politecnico di Torino Logo" class="uni-logo">
-                            Politecnico di Torino
-                        </div>
-                    </div>
-                </li>
-                <li style="padding: 1rem 0; border-bottom: 1px solid var(--border-color);">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
-                        <div>
-                            <h3 style="margin-top: 0; margin-bottom: 0.25rem;">Project Work</h3>
-                            <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Future Network Infrastructures (A.Y. 2024/2025)</p>
-                        </div>
-                        <div class="uni-label" style="margin-top: 0;">
-                            <img src="../assets/images/polito.png" alt="Politecnico di Torino Logo" class="uni-logo">
-                            Politecnico di Torino
-                        </div>
-                    </div>
-                </li>
-            </ul>
+                </div>
+
+            </div>
         </section>
 
         <section style="margin-top: 3rem;">
@@ -161,5 +251,35 @@
     </main>
 
     <site-footer></site-footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('#course-filters .filter-btn');
+            const courseTimeline = document.getElementById('course-grid');
+            const uniGroups = document.querySelectorAll('.uni-group');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    if (filterValue === 'all') {
+                        courseTimeline.classList.add('grouped-mode');
+                        uniGroups.forEach(group => group.style.display = 'block');
+                    } else {
+                        courseTimeline.classList.remove('grouped-mode');
+                        uniGroups.forEach(group => {
+                            if (group.getAttribute('data-uni') === filterValue) {
+                                group.style.display = 'block';
+                            } else {
+                                group.style.display = 'none';
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
